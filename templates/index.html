@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Handwritten Math Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin: 0;
+    }
+
+    canvas {
+      border: 2px solid #000;
+      background-color: #fff;
+      cursor: crosshair;
+      margin-top: 20px;
+    }
+
+    .controls {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Handwritten Math Calculator</h1>
+
+  <canvas id="canvas" width="280" height="280"></canvas>
+
+  <div class="controls">
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="submitCanvas()">Calculate</button>
+  </div>
+
+  <div id="output">
+    <p><strong>Expression:</strong> <span id="expression"></span></p>
+    <p><strong>Result:</strong> <span id="result"></span></p>
+  </div>
+
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
